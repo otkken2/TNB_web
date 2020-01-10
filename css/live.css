@@ -1,0 +1,30 @@
+@import url("index.css");
+
+
+.li-live{
+ border-bottom:solid 1px rgb(49, 30, 151, .5);   
+ /* background: rgb(49, 30, 151); */
+}
+
+.live-description{
+    max-width: 90%;
+    margin: auto;
+    margin-top:20px;
+    border-top: solid 0.5px rgb(49, 30, 151, .5);
+}
+
+
+.live-description p{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    text-align: left;
+}
+
+@media (max-width:812px){
+    
+    .live-description{
+        margin-top:10px;
+    }
+    
+}

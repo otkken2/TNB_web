@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ザ・なつやすみバンドの公式webサイトです">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- jquery cdn-->
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ザ・なつやすみバンド Official WebSite</title>
+</head>
+<body>
+    <div class="container" id="app"> <!-- 全体を囲む-->
+        <div class="leftContainer sp-header"><!-- PC→左カラム部のコンテナ　sp→ヘッダー　-->
+        
+                <h1 class="sp-main-logo"> <!-- sp版メインロゴ　-->
+                    <a href="index.html">
+                        <img src="image/logo.svg" alt="ザ・なつやすみバンド" srcset="">
+                    </a>
+                </h1>
+                <div class="hamburger"><!-- spのみ。ハンバーガーアイコン-->
+                   
+                        <img @click="menu" v-if="hamIcon" src="image/hamburger3.svg" class="hamIcon" alt="menu">
+                    
+                        <img @click="menu" src="image/xIcon.png" v-else alt="close" class="xIcon">
+                    
+                </div>
+                <ul class="g-nav"> <!-- 縦のナビメニュー　-->
+                    <li class="menu li-news"><a href="news.html"><img class="tMenu" src="image/news.png" alt=""></a></li>
+                    <li class="menu li-live"><a href="live.html"><img class="tMenu live" src="image/live.png" alt=""></a></li>
+                    <li class="menu li-about"><a href="about.html"><img class="tMenu" src="image/about.png" alt=""></a></li>
+                    <li class="menu li-video"><a href="video.html"><img class="tMenu" src="image/video.png" alt=""></a></li>
+                    <li class="menu li-discography"><a href="discography.html"><img class="tMenu" src="image/discography.png" alt=""></a></li>
+                    <li class="menu li-blog"><a href="blog.html"><img class="tMenu blog" src="image/blog.png" alt=""></a></li>
+                    <li class="menu li-goods"><a href="goods.html"><img class="tMenu" src="image/goods.png" alt=""></a></li>
+
+                    <li>
+                        <div class="icon-copy"><!--リンクアイコンと著作権表示を囲む-->
+                            <ul class="linkIcon">
+                                <li><a href=""><img src="image/apple-music.svg" alt="" srcset=""></a></li>
+                                <li><a href=""><img src="image/spotify.svg" alt="" srcset=""></a></li>
+                                <li><a href=""><img src="image/twitter.svg" alt="" srcset=""></a></li>
+                                <li><a href=""><img src="image/facebook.svg" alt="" srcset=""></a></li>
+                            </ul>
+                            <img class="copyright" src="image/copyrights_logo.svg" alt="the Natsuyasumi Band .2019 &copy;">
+                        </div>
+                    </li>
+                </ul>
+        </div>
+        <transition name = "fade"><!-- sp版ナビメニュー　-->
+            <ul v-show="show" class="sp-g-nav"> 
+                <li class="menu" ><a href=""><img class="tMenu" src="image/news.png" alt=""></a></li>
+                <li class="menu" ><a href="live.html"><img class="tMenu" src="image/live.png" alt=""></a></li>
+                <li class="menu" ><a href=""><img class="tMenu" src="image/about.png" alt=""></a></li>
+                <li class="menu" ><a href=""><img class="tMenu" src="image/video.png" alt=""></a></li>
+                <li class="menu" ><a href=""><img class="tMenu" src="image/discography.png" alt=""></a></li>
+                <li class="menu" ><a href=""><img class="tMenu" src="image/blog.png" alt=""></a></li>
+                <li class="menu" ><a href=""><img class="tMenu" src="image/goods.png" alt=""></a></li>
+            </ul>
+        </transition>
+            
+        <div class="rightContainer sp-contents"><!-- PC→右側カラムのコンテナ　sp→メインコンテンツ部のコンテナ　-->
+            <div class="main"> 
+
+
+
+
+
+            </div>
+                <!-- <div id="upToTop"><a href="#">上へ戻る</a></div> -->
+            <footer class="footer">　<!--フッター-->
+                <h1 class="main-logo">
+                    <a href="index.html">
+                        <img v-on:click="showModal" src="image/logo.svg" alt="ザ・なつやすみバンド" srcset="">
+                    </a>
+                </h1>
+                <div class="sp-icon-copy"><!--リンクアイコンと著作権表示を囲む-->
+                    <ul class="linkIcon">
+                        <li><a href=""><img src="image/apple-music.svg" alt="" srcset=""></a></li>
+                        <li><a href=""><img src="image/spotify.svg" alt="" srcset=""></a></li>
+                        <li><a href=""><img src="image/twitter.svg" alt="" srcset=""></a></li>
+                        <li><a href=""><img src="image/facebook.svg" alt="" srcset=""></a></li>
+                    </ul>
+                    <img class="copyright" src="image/copyrights_logo.svg" alt="the Natsuyasumi Band .2019 &copy;">
+                </div>
+            </footer>
+        </div>
+
+        
+     </div>
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>    
+    <script src="js/main.js"></script>
+</body>
+</html>

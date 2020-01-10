@@ -1,0 +1,596 @@
+/*
+Theme Name: TNB_web
+Theme URI: http://TNB_web.com/
+Author: Kenji Otaka
+Author URI: http://TNB_web.com/
+Description: The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+Version: 1.0
+*/
+
+
+html{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    height:100vh;
+}
+
+a:link,a:visited{
+    color: black;
+}
+
+.g-nav a,.sp-g-nav a,#more-news a,.post-title a,.post-nav a,#post-title-top a{
+    display: block;
+    text-decoration: none;
+}
+
+
+
+.container{
+    /* background: yellowgreen; */
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    max-height: 100vh;
+    max-width: 1080px;
+    width: 100vw;
+}
+
+.rightContainer{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    min-height:371px;
+    width: 100%;
+}
+
+#upToTop{
+    height: 30px;
+    width: 60px;
+    text-align: center;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    opacity: 0.7;
+    background: grey;
+}
+
+.leftcontainer{
+    /* background: slateblue; */
+}
+
+
+
+.sp-main-logo,.hamburger,.sp-g-nav{
+    display: none;
+}
+
+
+.g-nav{
+    /* background-color:grey; */
+    flex:0 280px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.g-nav > li {
+    /* background: yellow; */
+    /* padding-left: 15px;
+    padding-top: 15px; */
+    width: 90%;
+    height: 53px;    
+}
+
+.g-nav .menu:hover,.linkIcon li:hover,a:hover{
+    opacity: 0.5;
+
+}
+
+
+hr{
+    opacity: 0.5;
+    height: 1px;
+    border: none;
+    background: rgb(49, 30, 151);
+    width:90%;
+}
+
+
+
+.tMenu{
+    /* background: fuchsia; */
+   height: 35px;    
+}
+
+
+
+
+.main{
+    /* background-color: rgb(211, 78, 16); */
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    overflow:scroll;
+    font-size:14px;
+    font-family:serif;
+    line-height: 29px;
+/*     padding-bottom: 50px; */
+}
+
+
+#latestnews,#more-news{
+    margin: auto;
+    margin-top: 90px;
+    border-top: solid 0.5px;
+    width: fit-content;
+    padding: 0 60px;
+    border-color: rgb(49, 30, 151,.5);
+}
+
+#more-news{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.page-title {
+    display: none;
+    height: 40px;
+}
+
+
+.image{
+    width: 100%;
+}
+
+.contents{
+    width: 89%;
+    align-self: center;
+   
+}
+
+.posts{
+    margin-top: 50px;
+}
+
+#post-top{
+    display: flex;
+}
+
+#posts-top{
+    width:65%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+#post-header-top{
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 0.5px ;
+    border-color: rgb(49, 30, 151,.5);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.post-meta{
+    display: inline-block;
+    font-size: 0.8em;
+    opacity:0.5;
+}
+
+
+
+/* .latest-news{
+    flex: 1;
+    height:100%;
+    padding: 10px;
+    width: 95%;
+    align-self: center;
+    margin-top: 40px;
+} */
+.post-title{
+    color: black;
+    font-size: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#post-title-top{
+    /* background-color: brown; */
+}
+
+#top-news-hr{
+    text-align: left;
+}
+
+
+.post-date{
+    text-align: center;
+    line-height: 12px;
+    font-size: 12px;
+}
+
+.post-content{
+    /* display: inline-block; */
+    /* background-color: darkgreen; */
+    width: 100%;
+    margin:30px auto;
+    text-align: left;
+}
+.post-content p{
+    width:85%;
+    margin: 0 auto;
+}
+
+.wp-block-image{
+    margin: 0;
+    /* background-color: blue;  */
+    width: 90%;
+    max-width:80%;
+    margin:auto;
+}
+
+.post-nav{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.post-newer ,.post-prev{
+    /* border: solid 1px rgb(49, 30, 151, .5) ; */
+    padding: 3px 15px;
+}
+
+
+
+
+
+.footer{
+    /* justify-content: end; */
+    /* flex: 0 1 200px; */
+    /* display: flex; */
+    height: 80px;
+    position: sticky;
+    bottom:0;
+    background-color:white;
+    padding-right: 10px;
+    /* align-self: center; */
+/*     background-color: rgb(145, 77, 158); */
+}
+
+.linkIcon{
+    /* background-color: tomato; */
+    display: flex;
+    justify-content: start;
+}
+.linkIcon li{
+    margin-right: 15px;
+}
+
+.icon-copy{
+    /* display: flex;
+    flex-direction: column; */
+    /* background-color: rgb(42, 14, 168); */
+}
+
+.sp-icon-copy{
+    display: none;
+}
+
+.main-logo{
+    height: 80%;
+    width: 50vw;
+    /* background-color: rgb(150, 20, 20); */
+    max-width: 617px;
+    margin-left: auto;
+}
+
+.main-logo:hover{
+    opacity: 0.5;
+}
+
+h1 img{
+    /* background-color: rgb(7, 97, 26); */
+    height: 100%;
+    width: 100%;
+}
+
+.copyright{
+    height:10px;
+    /* background-color: rgb(150, 20, 20); */
+}
+
+
+
+
+.modalActive{
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    background: rgba(0, 0, 0, 0.904);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.modalActive iframe{
+    width: 100%;
+    height: 50%;
+    align-self: center;
+    opacity: 1;
+    z-index: 100;
+}
+
+.modalActive img{
+    width: 50px;
+    align-self: center;
+    margin-top: 10px;
+}
+
+.modalHoverd{
+    background: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.v-enter-active,.v-leave-active{
+    transition: 0.5s;
+}
+.v-enter,.v-leave-to{
+    opacity: 0;
+    transform: translateZ(100px);
+}
+
+
+.youtube {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* height: 56.25%; */
+}
+.youtube iframe{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+small{
+    font-size: 0.6rem;
+    opacity: 0.5;
+    font-family: serif;
+}
+
+figcaption{
+    text-align: center; 
+}
+
+
+/* ーーーーーーーーーーーーーー以下、SP版ですーーーーーーーーーーー */
+/* ーーーーーーーーーーーーーー以下、SP版ですーーーーーーーーーーー */
+/* ーーーーーーーーーーーーーー以下、SP版ですーーーーーーーーーーー */
+/* ーーーーーーーーーーーーーー以下、SP版ですーーーーーーーーーーー */
+/* ーーーーーーーーーーーーーー以下、SP版ですーーーーーーーーーーー */
+/* ーーーーーーーーーーーーーー以下、SP版ですーーーーーーーーーーー */
+/* ーーーーーーーーーーーーーー以下、SP版ですーーーーーーーーーーー */
+/* ーーーーーーーーーーーーーー以下、SP版ですーーーーーーーーーーー */
+/* ーーーーーーーーーーーーーー以下、SP版ですーーーーーーーーーーー */
+/* ーーーーーーーーーーーーーー以下、SP版ですーーーーーーーーーーー */
+/* ーーーーーーーーーーーーーー以下、SP版ですーーーーーーーーーーー */
+/* ーーーーーーーーーーーーーー以下、SP版ですーーーーーーーーーーー */
+/* ーーーーーーーーーーーーーー以下、SP版ですーーーーーーーーーーー */
+/* ーーーーーーーーーーーーーー以下、SP版ですーーーーーーーーーーー */
+/* ーーーーーーーーーーーーーー以下、SP版ですーーーーーーーーーーー */
+/* ーーーーーーーーーーーーーー以下、SP版ですーーーーーーーーーーー */
+/* ーーーーーーーーーーーーーー以下、SP版ですーーーーーーーーーーー */
+
+@media (max-width:812px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+
+    .sp-header{
+        position: sticky;
+        top: 0;
+        background:white;
+        height: 55px;
+        min-height: 55px;
+        display: flex;
+        justify-content: start;
+        z-index: 1;
+    }
+
+    .sp-g-nav{
+        display: unset;
+        flex:0 280px;
+        height:calc(100% - 115px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        text-align: center;
+        padding-left: 0px;
+        position: fixed;
+        top: 55px;
+        bottom: 64px;
+        background:white;
+        opacity: 0.96;
+        z-index: 1;
+        overflow:scroll;
+    }
+
+    .sp-g-nav > li {
+        /* background: yellow; */
+        width: 90%;
+        height: 53px;
+        margin: auto;
+    }
+
+    
+
+    .sp-g-nav .menu:hover,.linkIcon li:hover{
+        opacity: 0.5;
+    }
+
+    .rightContainer{
+        display:flex;
+        flex-direction: column;
+
+        height: 100vh;
+    }
+
+    .hamburger {
+        display: block;
+        margin: auto;
+        display: flex;
+    }
+
+    .hamburger:hover{
+        cursor: pointer;
+    }
+   
+    
+    .hamburger .hamIcon{
+        height: 35px;
+        width: 35px;
+        align-content: center;
+        opacity: 0.5;
+    }
+    
+    .xIcon{
+        height: 20px;
+        width: 35px;
+    }
+    .xIcon:active{
+        height: 15px;
+        width: 35px;
+    }
+
+    .hamIcon:active{
+        height: 30px;
+        width: 30px;
+    }
+    .image{
+        max-width: 100%;
+    } 
+
+
+    
+
+    .sp-main-logo{
+        display: block;
+        /* background: violet; */
+        width: 75%;
+        margin-left: 15px;
+    }
+
+    .g-nav{
+        margin: auto;
+        text-align: center;
+        display: none;
+    }
+
+    .page-title {
+        display: unset;
+        padding-bottom: 0px;
+        /* background: slateblue; */
+    }
+    
+    #posts-top{
+        width:90%;
+    }
+
+
+    
+    #post-header-top{
+        display: inline-block;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    #post-title-top{
+        margin-left: 0;
+    }
+
+    .page-title .tMenu{
+        /* background: fuchsia; */
+        height: 35px;
+    }
+    
+    .footer{
+        
+        /* background-color: hotpink; */
+        height: 60px;
+        padding-right: 0px;
+        position: sticky;
+        width: 100%;
+    }
+
+    .icon-copy{
+        display: none;
+    }
+    
+    .sp-icon-copy{
+        display: block;
+    }
+
+    
+    .linkIcon{
+        justify-content: center;
+        margin-top: 8px;
+    }
+
+    .linkIcon li{
+        margin: 0 12px;
+    }
+
+    #latest-content{
+        width:90%;
+    }
+
+    .main-logo{
+        display: none;
+    }
+    
+
+    /* Vue.js アニメ用 */
+    .fade-enter-active, .fade-leave-active{
+        transition: 0.5s;
+    }
+    .fade-enter, .fade-leave-to{
+        opacity: 0;
+        transform: translateZ(100px);
+    }
+    /* Vue.js アニメ用 */
+
+
+
+
+    .modalActive iframe{
+        width: 100%;
+    }
+
+    .post-content{
+        width:93%;
+
+    }
+
+
+    
+    
+}
